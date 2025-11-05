@@ -2,8 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
 import Card from '@/components/ui/Card';
-import { MapPin, Mail, Phone, Briefcase, Code, BarrelIcon, LucideTransgender, ArrowBigDown, ArrowBigDownDash, ArrowBigRightDashIcon, ArrowBigUpDashIcon } from 'lucide-react';
-import { BARREL_OPTIMIZATION_PREFIX } from 'next/dist/shared/lib/constants';
+import { MapPin, Mail, Phone, Briefcase, ArrowBigUpDashIcon } from 'lucide-react';
 
 export default function Home() {
   const experiences = [
@@ -59,8 +58,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
           <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-600 shadow-xl">
-            <img 
-              src="pas_foto.jpg" 
+            <img  src="pas_foto.jpg" 
               alt="Stephen Chuang"
               className="w-full h-full object-cover"
             />
@@ -154,7 +152,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Let&apos;s Work Together</h2>
           <p className="text-xl text-gray-600 mb-8">
-            I&apos;m currently available for freelance work and full-time positions.
+            I&apos;m currently open for full-time internship opportunities—ready to learn, contribute, and grow with a passionate team.
           </p>
           <div className="flex gap-4 justify-center">
             <Button href="mailto:stephenchuang19@gmail.com">
