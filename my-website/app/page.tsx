@@ -63,11 +63,11 @@ export default function Home() {
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Hi, I&apos;m <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Your Name
+              Stephen Chuang
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            Full Stack Developer | React Specialist | Problem Solver
+            Full Stack Developer | IoT Developer | Problem Solver
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button href="#contact">Get In Touch</Button>
