@@ -1,69 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* 🌈 Warna dasar tema */
 :root {
-  --background: #aa07fa;
-  --foreground: #2dda22;
-  --accent: #0070f3;
-  --accent-hover: #0059c9;
-  --card-bg: #ffffff;
-  --border-color: #e5e7eb;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-/* 🌙 Mode gelap otomatis */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #Ef172a;
-    --foreground: #f8fafc;
-    --accent: #60a5fa;
-    --accent-hover: #3b82f6;
-    --card-bg: #1e293b;
-    --border-color: #334155;
-  }
-}
-
-/* 🔤 Font global */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Inter", Arial, sans-serif;
-  margin: 0;
+* {
+  box-sizing: border-box;
   padding: 0;
-  transition: all 0.2s ease-in-out;
+  margin: 0;
 }
 
-/* 🧱 Gaya elemen umum */
-main {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 20px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+html {
+  scroll-behavior: smooth;
 }
 
-/* 🔘 Tombol */
-button {
-  background-color: var(--accent);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, transform 0.1s;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-button:hover {
-  background-color: var(--accent-hover);
-  transform: translateY(-2px);
-}
-
-/* ✨ Link */
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
