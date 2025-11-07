@@ -43,11 +43,23 @@ export default function Home() {
     }
   ];
 
-  const skills = [
-    "Platform IO", "Flutter", "MySQL", "Firebase", "Node.js",
-    "Next.js", "Squareline Studio", "TensorFlow + Keras",
-    "Easy EDA", "Canva", "Figma", "Photoshop", "Fusion 360", "3D Slicing", "Cisco Packet Tracer",
-  ];
+const skills = [
+  { name: "Platform IO", slug: "platformio" },
+  { name: "Flutter", slug: "flutter" },
+  { name: "MySQL", slug: "mysql" },
+  { name: "Firebase", slug: "firebase" },
+  { name: "Node.js", slug: "nodejs" },
+  { name: "Next.js", slug: "nextjs" },
+  { name: "Squareline Studio", slug: "squareline" },
+  { name: "TensorFlow + Keras", slug: "tensorflow" },
+  { name: "Easy EDA", slug: "easyeda" },
+  { name: "Canva", slug: "canva" },
+  { name: "Figma", slug: "figma" },
+  { name: "Photoshop", slug: "photoshop" },
+  { name: "3D CAD Design", slug: "fusion360" },
+  { name: "3D Slicing", slug: "3dslicing" },
+  { name: "Cisco Packet Tracer", slug: "cisco" },
+];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -60,7 +72,7 @@ export default function Home() {
           <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-blue-600 shadow-xl">
             <img  src="pas_foto.jpg" 
               alt="Stephen Chuang"
-              className="w-full h-full object-cover"
+               className="w-full h-full object-cover"
             />
           </div>
           </div>
@@ -134,18 +146,23 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
-          <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
-            {skills.map((skill, i) => (
-              <span key={i} className="px-6 py-3 bg-white rounded-lg shadow-md text-gray-800 font-medium hover:shadow-lg transition">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+<section id="skills" className="py-20 px-4">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
+    <p className="text-center text-gray-600 mb-8">Click on any skill to view related projects and work samples</p>
+    <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
+      {skills.map((skill, i) => (
+        <a 
+          key={i} 
+          href={`/skills/${skill.slug}`}
+          className="px-6 py-3 bg-white rounded-lg shadow-md text-gray-800 font-medium hover:shadow-xl hover:scale-105 transition transform cursor-pointer hover:bg-blue-50 hover:text-blue-600"
+        >
+          {skill.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-white">
