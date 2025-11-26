@@ -17,7 +17,7 @@ export default function Footer() {
             <Youtube size={24} />
           </a>
         </div>
-        <p className="text-gray-400">© 2024 Your Name. All rights reserved.</p>
+        <p className="text-gray-400">© 2024 Stephen Chuang. All rights reserved.</p>
       </div>
     </footer>
   );
